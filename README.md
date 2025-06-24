@@ -1,65 +1,81 @@
-💰 Personal Finance Tracker
+# 💰 Personal Finance Tracker
 
-This is a simple command-line personal finance tracking tool built in Python. It helps you log income and expenses, view transactions by date range, and generate weekly or monthly summaries — all saved in a CSV file for easy portability and analysis.
-🧩 Features
+A simple command-line tool to track income and expenses using Python and CSV. It lets you log transactions, view summaries over time, and visualize trends with plots.
 
-    Record income and expense transactions with date, category, amount, and optional description.
+---
 
-    Store and manage data in a local CSV file (finance_data.csv).
+## 🧩 Features
 
-    Filter and view transactions in a specific date range.
+- Record income and expenses with date, amount, category, and optional description.
+- Save data in a CSV file (`finance_data.csv`).
+- View transactions between two dates.
+- Display summary statistics (total income, expense, net savings).
+- Plot income and expense trends over time.
+- Generate weekly or monthly summaries.
 
-    Display summary statistics:
+---
 
-        Total income
+## 📦 Requirements
 
-        Total expense
+- Python 3.x
+- [pandas](https://pandas.pydata.org/)
+- [matplotlib](https://matplotlib.org/)
 
-        Net savings
+Install required packages:
 
-    Plot income and expense trends over time using matplotlib.
+```bash
+pip install pandas matplotlib
+```
 
-    Generate monthly or weekly financial summaries.
+---
 
-📂 File Structure
+## 🚀 Getting Started
 
-├── main.py           # Main program and command-line interface
-├── data_entry.py     # Utility functions for getting user input
-├── finance_data.csv  # (auto-generated) Stores all financial transactions
+1. Clone this repository:
 
-🚀 Getting Started
-1. Clone the Repository
-
+```bash
 git clone https://github.com/your-username/finance-tracker.git
 cd finance-tracker
+```
 
-2. Install Dependencies
+2. Run the main script:
 
-Make sure you have Python 3 and pip installed. Then run:
-
-pip install pandas matplotlib
-
-3. Run the Program
-
+```bash
 python main.py
+```
 
-🛠 Usage Guide
+---
 
-Upon launching the app, you'll be prompted with a menu:
+## 📂 Project Structure
 
+```
+.
+├── main.py           # Main application logic and user interface
+├── data_entry.py     # Input helpers for user interaction
+├── finance_data.csv  # Transaction data (auto-created)
+```
+
+---
+
+## 📋 How to Use
+
+When you run `main.py`, you'll see a menu:
+
+```
 1. Add a new transaction
 2. View transactions and summary within a date range
 3. View monthly or weekly summary
 4. Exit
+```
 
-    Add a new transaction: Logs a transaction with date, amount, category (Income or Expense), and optional description.
+- Dates must be in `dd-mm-yyyy` format.
+- Categories: `I` = Income, `E` = Expense.
 
-    View transactions: Filters transactions between two dates, summarizes income/expense/savings, and optionally plots a graph.
+---
 
-    View summary: Shows income, expense, and net savings summarized by month or week.
+## 📊 Example Output
 
-📊 Example Output
-
+```
 Transactions from 01-06-2025 to 10-06-2025
     date     amount category description
 01-06-2025   2000.00   Income  Paycheck
@@ -69,11 +85,4 @@ Summary:
 Total Income: $2000.00
 Total Expense: $150.00
 Net Savings: $1850.00
-
-🧠 Notes
-
-    Date format must be entered as dd-mm-yyyy.
-
-    The CSV file is automatically created if not found.
-
-    Descriptions are optional, but useful for clarity.
+```
